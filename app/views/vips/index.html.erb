@@ -1,0 +1,10 @@
+<h1><%= @organization.title %> Vips</h1>
+
+<% @vips.each do |vip| %>
+	<p>
+		<%= vip.name %>
+		<%= link_to 'Show', organization_vip_path(@organization, vip) %>
+		<%= link_to 'Edit', edit_organization_vip_path(@organization, vip) %>
+		<%= link_to 'Delete', organization_vip_path(@organization, vip), method: :delete, data: { confirm: "Are you sure?" } %>
+	</p>
+<% end %>

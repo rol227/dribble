@@ -1,0 +1,10 @@
+<h1><%= @vip.name %></h1>
+
+<h2>About: </h2>
+	<p>
+	Four loko messenger bag vinyl plaid, vegan DIY salvia dreamcatcher tousled ethical squid American Apparel. Meh keytar cornhole High Life Portland, lo-fi banh mi artisan cold-pressed. Chia hashtag High Life, +1 squid skateboard scenester meggings authentic synth Helvetica tote bag listicle gastropub. Small batch Kickstarter VHS, organic leggings Bushwick gastropub beard salvia. Wes Anderson dreamcatcher stumptown, 90's gastropub squid Schlitz master cleanse Marfa forage plaid YOLO hoodie wolf. Try-hard brunch small batch XOXO Blue Bottle Wes Anderson. Tofu jean shorts mixtape, sustainable selfies cold-pressed PBR&B viral freegan meh actually.
+</p>
+
+<%= link_to 'Back', organization_path(@organization) %>
+<%= link_to 'Edit', edit_organization_vip_path(@organization, @vip) %>
+<%= link_to 'Delete', organization_vip_path(@organization, @vip), method: :delete, data: { confirm: "Are you sure?" } %>

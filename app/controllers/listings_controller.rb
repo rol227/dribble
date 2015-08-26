@@ -5,6 +5,9 @@ class ListingsController < ApplicationController
 	def index
 	end
 
+	def show
+	end
+
 	def new
 		@listing = @organization.listings.new
 	end
@@ -16,7 +19,7 @@ class ListingsController < ApplicationController
 		@listing = @organization.listings.build(listing_params)
 		
 		if @listing.save
-			redirect_to organization_path(@organization)
+			redirect_to @organization
 		else
 			render 'new'
 		end

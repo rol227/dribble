@@ -17,7 +17,7 @@
 				<tr>
 					<td>
 						<%= list.title %> given by
-						<%= list.vip.name %>
+						<%= link_to list.vip.name, organization_vip_path(@organization, list) %>
 					</td>
 				</tr>
 				<tr>
