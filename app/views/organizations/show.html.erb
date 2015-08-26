@@ -1,0 +1,26 @@
+<h1>
+	<%= @organization.title %>
+</h1>
+
+<%=link_to 'New V.I.P', new_organization_vip_path(@organization) %>
+<%=link_to 'New Listing', new_organization_listing_path(@organization) %>
+
+<% @listings = @organization.listings.group_by(&:the_when) %>
+<% @listings.each do |date, listing| %>
+	<table>
+			<tr>
+				<th>
+					<%= date.strftime("%A, %e %b %Y") %>
+				</th>
+			</tr>
+			<% listing.each do |list| %>
+				<tr>
+					<td>
+						<%= list.title %> given by
+						<%= list.vip.name %>
+					</td>
+				</tr>
+			<% end %>
+		</table>
+	<% end %>
+	
