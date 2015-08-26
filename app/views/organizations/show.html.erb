@@ -20,6 +20,13 @@
 						<%= list.vip.name %>
 					</td>
 				</tr>
+				<tr>
+					<td>
+						<%= link_to 'Edit', edit_organization_listing_path(@organization, list) %>
+						<%= link_to 'Delete', organization_listing_path(@organization, list), method: :delete, data: { confirm: "Are you sure?" } %>
+					</td>
+				</tr>
+			</br>
 			<% end %>
 		</table>
 	<% end %>

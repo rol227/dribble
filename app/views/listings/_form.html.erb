@@ -1,0 +1,17 @@
+<%= form_for [@organization, @listing] do |f| %>
+	<p>
+		<%= f.label :the_when %>
+		<%= f.date_select :the_when %>
+	</p>
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :vip %>
+		<%= f.select :vip_id, options_for_select(@organization.vips.all.map {|v| [v.name, v.id]}) %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
